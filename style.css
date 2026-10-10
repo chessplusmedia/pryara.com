@@ -44,19 +44,18 @@ body {
 
 main { padding-block: var(--space-5) var(--space-6); }
 main > * { max-width: var(--measure-text); }
-main > .table-wrap, main > .synthetic { max-width: none; }
+main > .table-wrap, main > .synthetic, main > .founder { max-width: none; }
 p, ul, ol, blockquote, figure { margin: 0; }
 main > * + * { margin-top: var(--space-3); }
 
 h1, h2, h3 { color: var(--ink); text-wrap: balance; margin: 0; }
-h1 { font: 600 44px/48px var(--sans); letter-spacing: -0.015em; max-width: 22ch; }
+h1 { font: 600 32px/36px var(--sans); letter-spacing: -0.015em; max-width: 22ch; }   /* mobile first: display-narrow */
 h1 + * { margin-top: var(--space-4); }
 h2 { font: 600 26px/32px var(--sans); letter-spacing: -0.005em; padding-top: var(--space-5); border-top: 1px solid var(--rule); }
 main > * + h2 { margin-top: var(--space-5); }
 h2 + * { margin-top: var(--space-3); }
 h3 { font: 600 19px/26px var(--sans); }
 main > * + h3 { margin-top: var(--space-4); }
-@media (max-width: 600px) { h1 { font-size: 32px; line-height: 36px; } }
 
 strong { font-weight: 600; }
 em { font-style: italic; }
@@ -90,6 +89,40 @@ blockquote { background: var(--sunken); border-radius: 4px; padding: var(--space
 blockquote > * + * { margin-top: var(--space-3); }
 .synthetic { border: 1px solid var(--alert); background: var(--sheet); padding: var(--space-3) var(--space-4); }
 .synthetic strong:first-child { color: var(--alert); }
+
+/* PRY-419: action band (buttons), synthetic-sample label, founder block */
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+main > .actions { margin-top: var(--space-4); }
+.btn { display: block; width: 100%; text-align: center; border-radius: 2px; padding: 12px 20px; font: 600 17px/24px var(--sans); text-decoration: none; border: 1px solid var(--ink); min-height: 48px; }
+.btn-primary { background: var(--ink); color: var(--paper); }
+.btn-secondary { background: var(--sheet); color: var(--ink); border-color: var(--edge); }
+.btn:hover { text-decoration: underline; text-decoration-color: var(--verified); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.actions + p { color: var(--muted); font-size: 15px; line-height: 24px; margin-top: var(--space-2); }
+.synthetic-label strong:first-child { color: var(--alert); font: 600 12px/16px var(--sans); letter-spacing: 0.08em; text-transform: uppercase; }
+.founder { display: flex; flex-direction: column; gap: var(--space-4); align-items: flex-start; max-width: none; }
+.founder picture { flex: none; }
+.founder img { display: block; width: 160px; height: 200px; object-fit: cover; border: 1px solid var(--rule); background: var(--sunken); }
+.founder-text { max-width: var(--measure-text); }
+/* wider screens add to the phone layout (mobile first, founder 10-10) */
+@media (min-width: 601px) {
+  h1 { font-size: 44px; line-height: 48px; }
+  .btn { display: inline-block; width: auto; }
+  .founder { flex-direction: row; }
+  .founder img { width: 200px; height: 250px; }
+}
+/* phones only: ledger tables stack their rows instead of scrolling (mobile first, founder 10-10) */
+@media (max-width: 600px) {
+  .stack { overflow: visible; }
+  .stack table { min-width: 0; }
+  .stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .stack tr { display: grid; grid-template-columns: auto 1fr; gap: var(--space-1) var(--space-3); padding: var(--space-3); border-bottom: 1px solid var(--rule); }
+  .stack tr:last-child { border-bottom: 0; }
+  .stack td { display: block; padding: 0; border: 0; }
+  .stack td:first-child { grid-column: 1; }
+  .stack td:last-child { grid-column: 2; grid-row: 1; justify-self: end; }
+  .stack td:not(:first-child):not(:last-child) { grid-column: 1 / -1; }
+  .stack td:not(:first-child):not(:last-child)::before { content: attr(data-label); display: block; color: var(--muted); font: 600 12px/16px var(--sans); letter-spacing: 0.08em; text-transform: uppercase; margin-top: var(--space-2); }
+}
 
 .site-footer { border-top: 1px solid var(--rule); padding-block: var(--space-4) var(--space-6); color: var(--muted); font-size: 15px; line-height: 24px; }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin-bottom: var(--space-2); }

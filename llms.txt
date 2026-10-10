@@ -9,6 +9,8 @@
 - Our AI tools research and draft. Francis Rotich, our founder, reviews every page in full before the firm sees it.
 - The firm checks, signs and submits the EOI. We never contact the procuring entity. We do not promise shortlisting
   or a win.
+- Free: name an open REOI and we send you its criteria checklist (every shortlisting criterion, format rule and the
+  deadline, quoted from the notice). No obligation. Ask at pryara-eoi@agentmail.to.
 
 ## Terms
 - USD 150 per EOI, paid in advance by card (USD) or by card or M-Pesa (KES), with an eTIMS invoice.
@@ -29,3 +31,9 @@ pryara-eoi@agentmail.to
 - Sample EOI pack (synthetic data): https://pryara.com/sample-eoi.html
 - Privacy notice: https://pryara.com/privacy.html
 - Client terms: https://pryara.com/client-terms.html
+
+## Markdown versions (same text, for AI agents)
+- https://pryara.com/index.md
+- https://pryara.com/sample-eoi.md
+- https://pryara.com/privacy.md
+- https://pryara.com/client-terms.md

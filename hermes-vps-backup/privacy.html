@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How the privately operated Hermes VPS Backup utility accesses Google Drive and handles encrypted recovery copies, authorization, retention and website data.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Privacy notice — Hermes VPS Backup</title>
+  <link rel="canonical" href="https://pryara.com/hermes-vps-backup/privacy.html">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../fonts/PryaraSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/PryaraSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="../" aria-label="Pryara home">Pryara</a><span class="descriptor">Hermes VPS Backup</span>
+  </header>
+  <main id="main">
+    <h1>Privacy notice</h1>
+    <p>Updated 15 October 2026 · Contact: <a href="mailto:privacy@pryara.com?subject=Hermes%20VPS%20Backup%20privacy">privacy@pryara.com</a></p>
+
+    <h2>1. Operator and scope</h2>
+    <p>Hermes VPS Backup is operated privately by the account holder who authorizes it, for recovery of that operator’s own Hermes Agent installation. This notice covers that backup utility and its information pages. It is separate from the Pryara EOI service and from the different tool named Pryara Backup described in Pryara’s general privacy notice.</p>
+    <p>There is no public signup service. Website visitors are not asked to authorize access to their Google accounts. Privacy questions about this utility can be sent to privacy@pryara.com with “Hermes VPS Backup” in the subject.</p>
+
+    <h2>2. Information handled</h2>
+    <p>Recovery copies can include application configuration, conversations, memory, skills, approved workspace files and credentials necessary to recover the operator’s installation. The utility encrypts this content locally with restic before uploading it to Google Drive.</p>
+    <p>The Google connection also processes authorization tokens and the file identifiers, names, sizes and timestamps needed to store, find, verify and restore the encrypted repository. Google can see the account identity and storage/transfer metadata; encryption of backup content does not hide that metadata.</p>
+
+    <h2>3. Google permissions and purpose</h2>
+    <p>The utility requests <code>https://www.googleapis.com/auth/drive.file</code> to create and manage files associated with this backup connection. It does not request unrestricted access to all Drive files, Gmail or Calendar. Access is used for encrypted backup storage, integrity checks, recovery and approved repository retention.</p>
+    <p>Google API data is not sold, used for advertising or used by this backup utility to train AI models. Its use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements where applicable.</p>
+
+    <h2>4. Storage, providers and protection</h2>
+    <p>Google Drive stores the encrypted repository. The operator’s server, hosted by Contabo, holds the local application state and performs backup/recovery operations. Google authorization credentials and the backup recovery password are stored in protected host configuration outside the Hermes agent’s accessible environment. The operator keeps an independent recovery-password copy.</p>
+    <p>Telegram is used for short private operational-status alerts. These alerts do not contain backup content, conversation text, recovery passwords or authorization tokens. This backup utility sends no backup content to an AI model provider.</p>
+    <p>Storage and communications providers process the metadata needed to operate their services under their own terms. Encrypted storage does not make the repository immutable: misuse or revocation of account access can affect availability.</p>
+
+    <h2>5. Retention and deletion</h2>
+    <p>Manual encrypted backups and recovery checks have passed. Automatic backup scheduling and retention are not yet active. The planned policy keeps seven daily and four weekly recovery points; periods can overlap.</p>
+    <p>Existing verified snapshots, protected recovery anchors and local recovery copies can remain until the operator deliberately reviews and removes them. This notice does not promise a maximum automatic deletion period while scheduled retention is not active. Deleting data from the live application does not immediately remove copies already held in backups.</p>
+    <p>Revoking Google authorization stops future authorized access; it does not itself delete existing files from Google Drive. Deleting a backup repository is a separate deliberate operation. Requests about retained data should be directed to the privacy contact.</p>
+
+    <h2>6. Website visitors</h2>
+    <p>These information pages contain no forms, analytics, advertising, third-party embeds or executable scripts and do not set application cookies. They use the site’s existing locally hosted stylesheet and fonts.</p>
+    <p>The site is hosted on GitHub Pages. GitHub may record technical information such as visitors’ IP addresses to deliver and secure the site, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. Following an external link or sending an email uses the relevant provider’s service.</p>
+
+    <h2>7. Contact and changes</h2>
+    <p>For questions, access concerns or deletion requests relating to this utility, contact <a href="mailto:privacy@pryara.com?subject=Hermes%20VPS%20Backup%20privacy">privacy@pryara.com</a>. This mailbox is shared as a contact address; the utility remains personally operated and distinct from Pryara’s EOI service.</p>
+    <p>This notice will be updated when the utility’s data handling changes, including activation of automatic retention. Changes that require renewed consent will be presented before the corresponding new access or use.</p>
+  </main>
+  <footer class="site-footer">
+    <nav aria-label="Utility navigation">
+      <a href="./">Backup utility</a>
+      <a href="privacy.html" aria-current="page">Utility privacy notice</a>
+      <a href="../">Pryara website</a>
+    </nav>
+    <p>Hermes VPS Backup · Privately operated · Updated 15 October 2026</p>
+  </footer>
+</body>
+</html>

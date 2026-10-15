@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hermes VPS Backup is a privately operated utility for encrypted recovery copies of its operator's Hermes Agent installation in Google Drive.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Hermes VPS Backup — private encrypted backups</title>
+  <link rel="canonical" href="https://pryara.com/hermes-vps-backup/">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../fonts/PryaraSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/PryaraSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="../" aria-label="Pryara home">Pryara</a><span class="descriptor">Hermes VPS Backup</span>
+  </header>
+  <main id="main">
+    <h1>Hermes VPS Backup</h1>
+    <p>Hermes VPS Backup is an independently operated utility for recovery copies of its operator’s own Hermes Agent installation. It stores encrypted backup files in the operator’s Google Drive account.</p>
+    <p>This is a private utility, separate from the Pryara EOI service described elsewhere on this domain. It offers no public registration and does not ask website visitors to connect their Google accounts.</p>
+
+    <h2>What the utility does</h2>
+    <p>The utility uses restic to encrypt recovery copies before upload and rclone to connect to Google Drive. The recovery password is held separately from the Google authorization credentials.</p>
+    <p>Recovery copies can contain application configuration, conversation history, memory, approved workspace files and credentials needed to restore the operator’s installation. These files are encrypted before being stored in Google Drive.</p>
+
+    <h2>Google Drive access</h2>
+    <p>The connection requests only <code>https://www.googleapis.com/auth/drive.file</code>. This permission allows it to create and manage files associated with the app’s backup connection. It does not request unrestricted access to all Drive files, Gmail or Calendar.</p>
+    <p>Google receives encrypted repository files and the metadata needed to store and transfer them. Encryption does not conceal the account identity, storage usage or transfer metadata from Google.</p>
+
+    <h2>Current backup status</h2>
+    <p>Encrypted backup and recovery checks have been completed. Automatic nightly backups are not yet enabled. Unattended scheduling will be activated only after durable authorization and scheduling checks have passed.</p>
+    <p>The intended scheduled retention is seven daily and four weekly recovery points, which can overlap. That policy is not yet running automatically. The <a href="privacy.html">privacy notice</a> explains retained recovery copies and deletion limits.</p>
+
+    <h2>Operator and privacy contact</h2>
+    <p>The utility is operated privately by the account holder who authorizes the backup connection. It is not operated as part of Pryara’s customer EOI service.</p>
+    <p>For privacy questions about this utility, email <a href="mailto:privacy@pryara.com?subject=Hermes%20VPS%20Backup%20privacy">privacy@pryara.com</a> and identify Hermes VPS Backup in your message.</p>
+    <p><a href="privacy.html">Read the Hermes VPS Backup privacy notice</a>.</p>
+  </main>
+  <footer class="site-footer">
+    <nav aria-label="Utility navigation">
+      <a href="./" aria-current="page">Backup utility</a>
+      <a href="privacy.html">Utility privacy notice</a>
+      <a href="../">Pryara website</a>
+    </nav>
+    <p>Hermes VPS Backup · Privately operated · Updated 15 October 2026</p>
+  </footer>
+</body>
+</html>

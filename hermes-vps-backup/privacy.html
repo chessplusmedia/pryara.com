@@ -22,7 +22,7 @@
   </header>
   <main id="main">
     <h1>Privacy notice</h1>
-    <p>Updated 15 October 2026 · Contact: <a href="mailto:privacy@pryara.com?subject=Hermes%20VPS%20Backup%20privacy">privacy@pryara.com</a></p>
+    <p>Updated 16 October 2026 · Contact: <a href="mailto:privacy@pryara.com?subject=Hermes%20VPS%20Backup%20privacy">privacy@pryara.com</a></p>
 
     <h2>1. Operator and scope</h2>
     <p>Hermes VPS Backup is operated privately by the account holder who authorizes it, for recovery of that operator’s own Hermes Agent installation. This notice covers that backup utility and its information pages. It is separate from the Pryara EOI service and from the different tool named Pryara Backup described in Pryara’s general privacy notice.</p>
@@ -42,8 +42,8 @@
     <p>Storage and communications providers process the metadata needed to operate their services under their own terms. Encrypted storage does not make the repository immutable: misuse or revocation of account access can affect availability.</p>
 
     <h2>5. Retention and deletion</h2>
-    <p>Manual encrypted backups and recovery checks have passed. Automatic backup scheduling and retention are not yet active. The planned policy keeps seven daily and four weekly recovery points; periods can overlap.</p>
-    <p>Existing verified snapshots, protected recovery anchors and local recovery copies can remain until the operator deliberately reviews and removes them. This notice does not promise a maximum automatic deletion period while scheduled retention is not active. Deleting data from the live application does not immediately remove copies already held in backups.</p>
+    <p>Manual encrypted backups, recovery checks and a scoped retention/pruning run have passed. Nightly backups are scheduled for 3:00 a.m. Africa/Nairobi. After successful backup and recovery verification, scheduled retention is configured to keep seven daily and four weekly recovery points; periods can overlap. The first automatic overnight backup and retention run is awaiting verification.</p>
+    <p>Designated recovery anchors, original rollback material and failed local captures can remain until the operator deliberately reviews and removes them. A failed verification or retention run requires operator review before further automatic attempts. The policy therefore does not promise an exact snapshot count or a maximum deletion period. Deleting data from the live application does not immediately remove copies already held in backups. Repository pruning permanently removes eligible encrypted backup objects rather than placing them in Google Drive Trash; it does not empty unrelated Trash.</p>
     <p>Revoking Google authorization stops future authorized access; it does not itself delete existing files from Google Drive. Deleting a backup repository is a separate deliberate operation. Requests about retained data should be directed to the privacy contact.</p>
 
     <h2>6. Website visitors</h2>
@@ -60,7 +60,7 @@
       <a href="privacy.html" aria-current="page">Utility privacy notice</a>
       <a href="../">Pryara website</a>
     </nav>
-    <p>Hermes VPS Backup · Privately operated · Updated 15 October 2026</p>
+    <p>Hermes VPS Backup · Privately operated · Updated 16 October 2026</p>
   </footer>
 </body>
 </html>
